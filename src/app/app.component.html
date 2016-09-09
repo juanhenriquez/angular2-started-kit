@@ -1,0 +1,37 @@
+<header>
+    <nav class="navbar navbar-inverse">
+        <div class="navbar-header">
+            <a href="/" class="navbar-brand">Angular 2</a>
+        </div>
+    </nav>
+</header>
+
+<main class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-4">
+            <div class="list-group user-list">
+                <li class="list-group-item" *ngFor="let user of users" (click)="selectUser(user)"
+                [class.active]="user === activeUser">
+                    <b>{{ user.name }}</b> <i><small>({{ user.username }})</small></i>
+                </li>
+            </div>
+
+            <user-form (userCreated)="onUserCreated($event)"></user-form>
+
+        </div>
+        <div class="col-sm-12 col-md-8">
+
+            <user-profile [user]="activeUser"></user-profile>
+
+            <div class="jumbotron" *ngIf="!activeUser">
+                <h2>Welcome to my Angular 2 app!</h2>
+                <p>This is a simple app for register users.</p>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<footer class="text-center">
+    Copyright &copy; 2016
+</footer>

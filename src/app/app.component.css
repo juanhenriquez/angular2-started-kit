@@ -1,0 +1,11 @@
+h1 { color: #282828; }
+
+.user-list li {
+    cursor: pointer;
+}
+
+.user-list li.active {
+    background-color: #263238;
+    color: #fff;
+    font-size: 1.2em;
+}

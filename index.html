@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Angular 2 App</title>
+
+    <!-- Css styles. -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/paper/bootstrap.min.css"/>
+
+    <!-- Javascripts -->
+    <!-- Load dependencies -->
+    <script src="node_modules/core-js/client/shim.js" charset="utf-8"></script>
+    <script src="node_modules/zone.js/dist/zone.js" charset="utf-8"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js" charset="utf-8"></script>
+
+    <!-- Load angular app -->
+    <script src="node_modules/systemjs/dist/system.src.js" charset="utf-8"></script>
+    <script src="systemjs.config.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        System.import('app').catch(function (err) {
+            console.log(err);
+        });
+    </script>
+
+</head>
+<body>
+
+    <my-app></my-app>
+
+</body>
+</html>
